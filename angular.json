@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jhipster-test": {
+    "jhipster": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
             "customWebpackConfig": {
               "path": "./webpack/webpack.custom.js"
             },
-            "outputPath": "build/resources/main/static/",
+            "outputPath": "target/classes/static/",
             "index": "src/main/webapp/index.html",
             "main": "src/main/webapp/main.ts",
             "polyfills": "src/main/webapp/polyfills.ts",
@@ -76,15 +76,15 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "jhipster-test:build:development",
+            "browserTarget": "jhipster:build:development",
             "port": 4200
           },
           "configurations": {
             "production": {
-              "browserTarget": "jhipster-test:build:production"
+              "browserTarget": "jhipster:build:production"
             },
             "development": {
-              "browserTarget": "jhipster-test:build:development"
+              "browserTarget": "jhipster:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,7 +101,7 @@
   "cli": {
     "cache": {
       "enabled": true,
-      "path": "./build/angular/",
+      "path": "./target/angular/",
       "environment": "all"
     },
     "packageManager": "npm"
