@@ -1,8 +1,7 @@
 package com.mycompany.myapp;
 
-import com.mycompany.myapp.JhipsterTestApp;
+import com.mycompany.myapp.JhipsterApp;
 import com.mycompany.myapp.config.AsyncSyncConfiguration;
-import com.mycompany.myapp.config.EmbeddedKafka;
 import com.mycompany.myapp.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -16,8 +15,7 @@ import org.springframework.test.annotation.DirtiesContext;
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@SpringBootTest(classes = { JhipsterTestApp.class, AsyncSyncConfiguration.class })
-@EmbeddedKafka
+@SpringBootTest(classes = { JhipsterApp.class, AsyncSyncConfiguration.class })
 @EmbeddedSQL
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
 public @interface IntegrationTest {
